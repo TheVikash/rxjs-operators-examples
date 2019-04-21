@@ -14,13 +14,12 @@ const notifier = () => timer(200);
 console.log('# emit buffer after 200ms ');
 
 source
-    .pipe(
-        windowWhen(notifier),
-        tap(()=> console.log('new buffer')),
-        mergeAll()
-    )
-    .subscribe(d => console.log(d));
-
+  .pipe(
+    windowWhen(notifier),
+    tap(() => console.log('new buffer')),
+    mergeAll()
+  )
+  .subscribe(d => console.log(d));
 
 //output
 // new buffer

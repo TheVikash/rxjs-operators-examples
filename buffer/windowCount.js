@@ -9,11 +9,11 @@ const source = timer(0, 100).pipe(take(9));
 console.log('# buffer 2 items');
 
 source
-    .pipe(
-        windowCount(2),
-        switchMap(w => w.pipe(toArray()))
-    )
-    .subscribe(d => console.log(d));
+  .pipe(
+    windowCount(2),
+    switchMap(w => w.pipe(toArray()))
+  )
+  .subscribe(d => console.log(d));
 
 // output
 // [ 0, 1 ]
@@ -27,16 +27,16 @@ source
 // #region example 2
 
 setTimeout(() => {
-    console.log('# buffer 2 items then skip 1 item')
-    source
-        .pipe(
-            windowCount(2,3), // cut after 3 values but add only 2 values
-            switchMap(w => w.pipe(toArray()))
-        )
-        .subscribe(v => console.log(v));
-}, 100)
+  console.log('# buffer 2 items then skip 1 item');
+  source
+    .pipe(
+      windowCount(2, 3), // cut after 3 values but add only 2 values
+      switchMap(w => w.pipe(toArray()))
+    )
+    .subscribe(v => console.log(v));
+}, 100);
 
-//output 
+//output
 // [ 0, 1 ]
 // [ 3, 4 ]
 // [ 6, 7 ]

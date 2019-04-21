@@ -13,12 +13,12 @@ const opening = timer(0, 500);
 const closing = () => timer(200);
 
 timer(0, 100)
-    .pipe(
-        take(36),
-        windowToggle(opening, closing),
-        switchMap(w => w.pipe(toArray()))
-    )
-    .subscribe(d => console.log(d));
+  .pipe(
+    take(36),
+    windowToggle(opening, closing),
+    switchMap(w => w.pipe(toArray()))
+  )
+  .subscribe(d => console.log(d));
 
 // Output
 // [ 0, 1 ]
