@@ -1,0 +1,22 @@
+{
+  "name": "rxjs-operators-examples",
+  "version": "1.0.0",
+  "description": "rxjs operators examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheVikash/rxjs-operators-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheVikash/rxjs-operators-examples/issues"
+  },
+  "homepage": "https://github.com/TheVikash/rxjs-operators-examples#readme",
+  "dependencies": {
+    "rxjs": "^6.4.0"
+  }
+}
